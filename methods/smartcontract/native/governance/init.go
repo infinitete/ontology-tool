@@ -19,7 +19,7 @@
 package governance
 
 import (
-	"github.com/ontio/ontology-tool/core"
+	"github.com/infinitete/ontology-tool/core"
 )
 
 func RegisterGovernance() {

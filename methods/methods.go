@@ -18,7 +18,7 @@
 package methods
 
 import (
-	"github.com/ontio/ontology-tool/methods/smartcontract"
+	"github.com/infinitete/ontology-tool/methods/smartcontract"
 )
 
 func init() {

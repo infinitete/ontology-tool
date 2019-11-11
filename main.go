@@ -24,9 +24,9 @@ import (
 	"time"
 
 	log4 "github.com/alecthomas/log4go"
-	"github.com/ontio/ontology-tool/config"
-	"github.com/ontio/ontology-tool/core"
-	_ "github.com/ontio/ontology-tool/methods"
+	"github.com/infinitete/ontology-tool/config"
+	"github.com/infinitete/ontology-tool/core"
+	_ "github.com/infinitete/ontology-tool/methods"
 )
 
 var (

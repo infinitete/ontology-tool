@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 
 	log4 "github.com/alecthomas/log4go"
+	"github.com/infinitete/ontology-tool/common"
+	"github.com/infinitete/ontology-tool/config"
 	"github.com/ontio/ontology-crypto/keypair"
 	sdk "github.com/ontio/ontology-go-sdk"
-	"github.com/ontio/ontology-tool/common"
-	"github.com/ontio/ontology-tool/config"
 	ontcommon "github.com/ontio/ontology/common"
 	"github.com/ontio/ontology/common/serialization"
 	"github.com/ontio/ontology/core/types"

@@ -1,7 +1,7 @@
 package native
 
 import (
-	"github.com/ontio/ontology-tool/methods/smartcontract/native/governance"
+	"github.com/infinitete/ontology-tool/methods/smartcontract/native/governance"
 )
 
 func RegisterNative() {

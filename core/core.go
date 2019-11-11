@@ -20,8 +20,8 @@ package core
 
 import (
 	log4 "github.com/alecthomas/log4go"
+	"github.com/infinitete/ontology-tool/config"
 	sdk "github.com/ontio/ontology-go-sdk"
-	"github.com/ontio/ontology-tool/config"
 )
 
 var OntTool = NewOntologyTool()
