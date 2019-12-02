@@ -28,7 +28,7 @@ func registerCandidate(ontSdk *sdk.OntologySdk, user *sdk.Account, peerPubkey st
 		PeerPubkey: peerPubkey,
 		Address:    user.Address,
 		InitPos:    initPos,
-		Caller:     []byte("did:ont:" + user.Address.ToBase58()),
+		Caller:     []byte("did:idfor:" + user.Address.ToBase58()),
 		KeyNo:      1,
 	}
 	method := "registerCandidate"
@@ -52,7 +52,7 @@ func registerCandidate2Sign(ontSdk *sdk.OntologySdk, ontid *sdk.Account, user *s
 		PeerPubkey: peerPubkey,
 		Address:    user.Address,
 		InitPos:    initPos,
-		Caller:     []byte("did:ont:" + ontid.Address.ToBase58()),
+		Caller:     []byte("did:idfor:" + ontid.Address.ToBase58()),
 		KeyNo:      1,
 	}
 	method := "registerCandidate"
@@ -791,7 +791,7 @@ func transferFromOngMultiSignToMultiSign(ontSdk *sdk.OntologySdk, pubKeys []keyp
 func assignFuncsToRole(ontSdk *sdk.OntologySdk, user *sdk.Account, contract ontcommon.Address, role string, function string) bool {
 	params := &auth.FuncsToRoleParam{
 		ContractAddr: contract,
-		AdminOntID:   []byte("did:ont:" + user.Address.ToBase58()),
+		AdminOntID:   []byte("did:idfor:" + user.Address.ToBase58()),
 		Role:         []byte(role),
 		FuncNames:    []string{function},
 		KeyNo:        1,
@@ -811,7 +811,7 @@ func assignFuncsToRole(ontSdk *sdk.OntologySdk, user *sdk.Account, contract ontc
 func assignOntIDsToRole(ontSdk *sdk.OntologySdk, user *sdk.Account, contract ontcommon.Address, role string, ontids []string) bool {
 	params := &auth.OntIDsToRoleParam{
 		ContractAddr: contract,
-		AdminOntID:   []byte("did:ont:" + user.Address.ToBase58()),
+		AdminOntID:   []byte("did:idfor:" + user.Address.ToBase58()),
 		Role:         []byte(role),
 		Persons:      [][]byte{},
 		KeyNo:        1,
@@ -838,7 +838,7 @@ type RegIDWithPublicKeyParam struct {
 
 func regIdWithPublicKey(ontSdk *sdk.OntologySdk, user *sdk.Account) bool {
 	params := RegIDWithPublicKeyParam{
-		OntID:  []byte("did:ont:" + user.Address.ToBase58()),
+		OntID:  []byte("did:idfor:" + user.Address.ToBase58()),
 		Pubkey: keypair.SerializePublicKey(user.PublicKey),
 	}
 	method := "regIDWithPublicKey"
