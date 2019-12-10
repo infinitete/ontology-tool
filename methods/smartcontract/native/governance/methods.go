@@ -138,7 +138,7 @@ type AssignOntIDsToRoleParam struct {
 }
 
 func AssignOntIDsToRole(ontSdk *sdk.OntologySdk) bool {
-	data, err := ioutil.ReadFile("./params/AssignOntIDsToRole.json")
+	data, err := ioutil.ReadFile("./params/AssignDnaIDsToRole.json")
 	if err != nil {
 		log4.Error("ioutil.ReadFile failed ", err)
 		return false
@@ -170,7 +170,7 @@ type AssignOntIDsToRoleAnyParam struct {
 }
 
 func AssignOntIDsToRoleAny(ontSdk *sdk.OntologySdk) bool {
-	data, err := ioutil.ReadFile("./params/AssignOntIDsToRoleAny.json")
+	data, err := ioutil.ReadFile("./params/AssignDnaIDsToRoleAny.json")
 	if err != nil {
 		log4.Error("ioutil.ReadFile failed ", err)
 		return false

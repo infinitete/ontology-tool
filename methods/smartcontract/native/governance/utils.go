@@ -820,14 +820,14 @@ func assignOntIDsToRole(ontSdk *sdk.OntologySdk, user *sdk.Account, contract ont
 		params.Persons = append(params.Persons, []byte(ontid))
 	}
 	contractAddress := utils.AuthContractAddress
-	method := "assignOntIDsToRole"
+	method := "assignDnaIDsToRole"
 	txHash, err := ontSdk.Native.InvokeNativeContract(config.DefConfig.GasPrice, config.DefConfig.GasLimit, user, OntIDVersion,
 		contractAddress, method, []interface{}{params})
 	if err != nil {
 		log4.Error("invokeNativeContract error :", err)
 		return false
 	}
-	log4.Info("assignOntIDsToRole txHash is :", txHash.ToHexString())
+	log4.Info("assignDnaIDsToRole txHash is :", txHash.ToHexString())
 	return true
 }
 
